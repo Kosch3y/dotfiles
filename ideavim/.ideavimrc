@@ -1,0 +1,47 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+let mapleader=" "
+set scrolloff=15
+set incsearch
+set surround
+set easymotion
+set commentary
+set highlightedyank
+set clipboard
+set relativenumber number
+map Q gq
+
+nnoremap J 5j
+nnoremap K 5k
+nnoremap <leader>j J
+nnoremap s ^
+nnoremap ge :action ShowErrorDescription<cr>
+nnoremap <leader>k i<Enter><Esc>;
+" nnoremap <C-;> m`A;<Esc>``
+
+inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap <C-l> <Right>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap ;; <Esc>A;
+inoremap ,, <Esc>A,
+
+map <leader>f <Plug>(easymotion-bd-f)
+map <leader>w <Plug>(easymotion-bd-w)
+map <leader>W <Plug>(easymotion-bd-W)
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)

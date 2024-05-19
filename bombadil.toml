@@ -1,0 +1,24 @@
+dotfiles_dir = "dotfiles"
+
+[settings.dots]
+
+alacritty = { source = "alacritty/alacritty.toml", target = ".config/alacritty/alacritty.toml" }
+AstroNvim = { source = "AstroNvim", target = ".config/nvim" }
+fish = { source = "fish", target = ".config/fish" }
+i3 = { source = "i3", target = ".config/i3" }
+picom = { source = "picom/picom.conf", target = ".config/picom/picom.conf" }
+polybar = { source = "polybar", target = ".config/polybar" }
+rofi = { source = "rofi", target = ".config/rofi" }
+bsfix = { source = "util/the_bullshit_fix.jl", target = ".util/the_bullshit_fix.jl" }
+ideavim = { source = "ideavim/.ideavimrc", target = ".ideavimrc" }
+discord = { source = "discord_updates_shut_up/settings.json", target = ".config/discord/settings.json" }
+midnight_enjoyer = { source = "util/midnight_enjoyer.jl", target = ".util/midnight_enjoyer.jl" }
+
+#TODO: figure out privileges. Mb wait for https://github.com/oknozor/toml-bombadil/issues/33
+# btrbk = { source = "backups/btrbk/btrbk.conf", target = "/etc/btrbk/btrbk.conf" }
+# snapper = { source = "backups/snapper/root", target = "/etc/snapper/configs/root" }
+
+# requires toolkit.legacyUserProfileCustomizations.stylesheets. More info: https://github.com/mbnuq/sidebery/iki/Firefox-Styles-Snippets-(via-userChrome.css)
+# waiting for ability to inject variable to path: https://github.com/oknozor/toml-bombadil/issues/258
+firefox_style = { source = "firefox/userChrome.css", target = ".mozilla/firefox/rip6alsd.default-release/chrome/userChrome.css" }
+# sidebery = {source="firefox/sidebery.json", target="???"}
