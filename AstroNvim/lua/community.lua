@@ -17,7 +17,4 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-
-  -- TODO: remove with nvim 0.10
-  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
 }
