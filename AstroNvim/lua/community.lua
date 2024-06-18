@@ -17,4 +17,5 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.file-explorer.oil-nvim" },
 }
