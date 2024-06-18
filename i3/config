@@ -28,7 +28,7 @@ exec ulimit -c 0
 exec_always --no-startup-id (cd ~/.config/polybar/ && ~/.config/polybar/launch.sh)
 
 # set wallpapers
-exec (sleep 1s && feh --bg-scale ~/Pictures/mmmoon.jpg)
+exec (sleep 2s && feh --bg-scale ~/Pictures/mmmoon.jpg)
 
 # picom composer
 exec_always picom --config ~/.config/picom/picom.conf
