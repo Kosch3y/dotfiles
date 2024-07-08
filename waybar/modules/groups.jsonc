@@ -1,0 +1,10 @@
+{
+  "group/sys_health": {
+    "orientation": "horizontal",
+    "modules": ["custom/despair", "custom/updates"],
+  },
+  "group/sys_monitor": {
+    "orientation": "horizontal",
+    "modules": ["memory", "load", "temperature", "battery"],
+  },
+}

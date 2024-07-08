@@ -1,0 +1,101 @@
+{
+    "custom/logo": {
+        "format": "  <span font='12' rise='-1000' color='#a3b8d6'>{icon}</span>",
+        "format-icons": [
+            "󰣇"
+        ],
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "<span font='12' rise='-1000'>{icon}</span>",
+        "format-icons": {
+            "1": "󰈹",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "default": "",
+        },
+    },
+    "sway/language": {
+        "format": "<span font='14' rise='-1000' color='#a3b8d6'>󰌌</span> {short}",
+        "format-icons": [
+            "󰌌"
+        ],
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    },
+    "disk": {
+        "interval": 30,
+        "format": "/: {free}",
+        "path": "/",
+    },
+    "pulseaudio": {
+        "format": "<span font='14' rise='-1000' color='#a3b8d6'>{icon}</span>   {volume:2}%",
+        "format-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                ""
+            ],
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+    },
+    "clock": {
+        "format": "<span font='12' rise='-1000' color='#a3b8d6'></span>  {:%d/%m %H:%M}",
+        "format-icon": "",
+    },
+    "battery": {
+        "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {capacity:2}%",
+        "format-icons": [
+            "󰂎",
+            "󰁻",
+            "󰁿",
+            "󰂁",
+            "󰁹"
+        ],
+    },
+    "memory": {
+        "interval": 30,
+        "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {used:4}+{swapUsed:4}GiB",
+        "format-icons": [
+            "󰍛"
+        ],
+    },
+    "load": {
+        "interval": 10,
+        "format": "<span font='14' rise='-1000' color='#a3b8d6'> </span> {load1:4}",
+        "format-icons": [
+            ""
+        ],
+        "max-length": 10,
+    },
+    "temperature": {
+        "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {temperatureC:2}°C",
+        "format-icons": [
+            ""
+        ],
+    },
+    "custom/despair": {
+        "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {}",
+        "format-icons": [
+            "󰈸"
+        ],
+        "exec": "~/.config/waybar/scripts/despair.jl",
+        "interval": 120,
+    },
+    "custom/updates": {
+        "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {}",
+        "format-icons": [
+            " 󰚰"
+        ],
+        "exec": "~/.config/waybar/scripts/updates.jl",
+        "interval": 600,
+    },
+}

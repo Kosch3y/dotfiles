@@ -5,11 +5,9 @@ dotfiles_dir = "dotfiles"
 alacritty = { source = "alacritty/alacritty.toml", target = ".config/alacritty/alacritty.toml" }
 AstroNvim = { source = "AstroNvim", target = ".config/nvim" }
 fish = { source = "fish", target = ".config/fish" }
-i3 = { source = "i3", target = ".config/i3" }
-picom = { source = "picom/picom.conf", target = ".config/picom/picom.conf" }
-polybar = { source = "polybar", target = ".config/polybar" }
-rofi = { source = "rofi", target = ".config/rofi" }
-bsfix = { source = "util/the_bullshit_fix.jl", target = ".util/the_bullshit_fix.jl" }
+sway = { source = "sway", target = ".config/sway" }
+waybar = { source = "waybar", target = ".config/waybar" }
+tofi = { source = "tofi", target = ".config/tofi" }
 ideavim = { source = "ideavim/.ideavimrc", target = ".ideavimrc" }
 discord = { source = "discord_updates_shut_up/settings.json", target = ".config/discord/settings.json" }
 midnight_enjoyer = { source = "util/midnight_enjoyer.jl", target = ".util/midnight_enjoyer.jl" }
