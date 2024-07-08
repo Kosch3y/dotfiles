@@ -18,4 +18,6 @@ return {
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.lsp.nvim-lsp-endhints" },
 }

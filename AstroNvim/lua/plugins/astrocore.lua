@@ -93,6 +93,10 @@ return {
         [";;"] = { "<Esc>A;" },
         [",,"] = { "<Esc>A," },
       },
+      v = {
+        J = { "5j" },
+        K = { "5k" },
+      },
       t = {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,
