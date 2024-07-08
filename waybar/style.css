@@ -1,0 +1,79 @@
+* {
+  font: 18px "JetBrainsMono Nerd Font Mono";
+  font-family: "Fira Sans Mono", monospase;
+  font-size: 14px;
+}
+
+@define-color main-bg-color #30333d;
+@define-color alt-bg-color #292b34;
+@define-color main-fg-color #dfdfdf;
+@define-color alt-fg-color #a3b8d6;
+@define-color unfocused-alt-fg-color #585E74;
+
+window#waybar {
+  background-color: @main-bg-color;
+  color: @main-fg-color;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#workspaces button {
+  border-radius: 0px;
+  padding: 0 5px;
+  background-color: transparent;
+  color: @unfocused-alt-fg-color;
+}
+
+#workspaces button.focused {
+  color: @alt-fg-color;
+  box-shadow: inset 0 -1px @alt-fg-color;
+}
+
+#workspaces button.urgent {
+  color: #eb4d4b;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+  padding: 0 10px;
+}
+
+#workspaces,
+#clock,
+#sys_monitor,
+#sys_health {
+  background-color: @alt-bg-color;
+  padding: 0 10px;
+  margin: 6px 10px;
+  border-radius: 20px;
+}
+
+#window {
+  margin: 0 4px;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}

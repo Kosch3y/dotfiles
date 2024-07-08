@@ -1,0 +1,17 @@
+{
+  "output": "HDMI-A-1",
+  "position": "bottom",
+  "modules-left": ["custom/logo", "sway/workspaces", "sway/mode"],
+  "modules-right": [
+    "group/sys_health",
+    "disk",
+    "group/sys_monitor",
+    "sway/language",
+    "pulseaudio",
+    "clock",
+  ],
+  "include": [
+    "~/.config/waybar/modules/modules.jsonc",
+    "~/.config/waybar/modules/groups.jsonc",
+  ],
+}

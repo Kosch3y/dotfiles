@@ -1,0 +1,24 @@
+font = usr/share/fonts/TTF/FiraSans-Light.ttf
+font-size = 20
+
+outline-width = 1
+border-width = 0
+padding-left = 4%
+padding-top = 2%
+padding-right = 0
+padding-bottom = 0
+
+prompt-text = ">> "
+background-color = #30333d
+text-color = #a3b8d6
+selection-color = #dfdfdf
+selection-background = #292b34
+# input-background = #292b34
+
+width = 30%
+height = 30%
+corner-radius = 10
+selection-background-corner-radius = 15
+selection-background-padding = 0,15
+
+hide-cursor = true
