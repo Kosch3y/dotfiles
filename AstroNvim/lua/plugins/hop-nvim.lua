@@ -9,18 +9,32 @@ return {
           n = {
             ["s"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
             ["<S-s>"] = {
-              function() require("hop").hint_camel_case { current_line_only = true } end,
-              desc = "Hop hint lines",
+              function() require("hop").hint_patterns({}, '{\\|(\\|\\[\\|"') end,
+              desc = "Hop hint bracket",
             },
-            -- ["<S-s>"] = { ":HopNodes<cr>" },
+            ["<leader>s"] = {
+              function() require("hop").hint_char1() end,
+              desc = "Hop hint char",
+            },
+            ["<S-l>"] = {
+              function() require("hop").hint_lines_skip_whitespace() end,
+              desc = "Hop hint line",
+            },
           },
           v = {
             ["s"] = { function() require("hop").hint_words { extend_visual = true } end, desc = "Hop hint words" },
             ["<S-s>"] = {
-              function() require("hop").hint_camel_case { current_line_only = true } end,
-              desc = "Hop hint lines",
+              function() require("hop").hint_patterns({}, '{\\|(\\|\\[\\|"') end,
+              desc = "Hop hint bracket",
             },
-            -- ["<S-s>"] = { ":HopNodes<cr>" },
+            ["<leader>s"] = {
+              function() require("hop").hint_char1() end,
+              desc = "Hop hint char",
+            },
+            ["<S-l>"] = {
+              function() require("hop").hint_lines_skip_whitespace() end,
+              desc = "Hop hint line",
+            },
           },
         },
       },
