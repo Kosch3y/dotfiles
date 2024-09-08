@@ -2,7 +2,7 @@ dotfiles_dir = "dotfiles"
 
 [settings.dots]
 
-alacritty = { source = "alacritty/alacritty.toml", target = ".config/alacritty/alacritty.toml" }
+foot = { source = "foot/foot.ini", target = ".config/foot/foot.ini" }
 AstroNvim = { source = "AstroNvim", target = ".config/nvim" }
 fish = { source = "fish", target = ".config/fish" }
 sway = { source = "sway", target = ".config/sway" }
