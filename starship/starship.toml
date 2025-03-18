@@ -1,20 +1,20 @@
 format = """
-[  ](bg:#303030 fg:#c7c7c7)\
-[](bg:#303030 fg:#707070)\
+[  $character](bg:#30333d fg:#a3b8d6)\
+[](bg:#30333d fg:#707070)\
 $directory\
 $git_branch\
 $git_status\
-[](#303030)\
+[](#30333d)\
 $fill\
-[](#303030)\
+[](#30333d)\
 $status\
 $cmd_duration\
-[ ](bg:#303030 fg:#909090)\
+[ ](bg:#30333d fg:#909090)\
 $username\
 $hostname\
-[ ](bg:#303030 fg:#909090)\
+[ ](bg:#30333d fg:#909090)\
 $time\
-[ ](bg:#303030 fg:#567676)"""
+[ ](bg:#30333d fg:#567676)"""
 
 # Disable the blank line at the start of the prompt
 add_newline = false
@@ -23,42 +23,43 @@ add_newline = false
 # and use the os module below
 [username]
 show_always = true
-style_user = "fg:#b69676 bg:#303030"
-style_root = "fg:#b69676 bg:#303030"
+style_user = "fg:#b69676 bg:#30333d"
+style_root = "fg:#b69676 bg:#30333d"
 format = '[$user]($style)'
 disabled = false
 
 [status]
-style = 'bg:#303030'
-symbol = '[✘ ](fg:red bg:#303030)'
-success_symbol = '[✔ ](fg:green bg:#303030)'
-format = '[[$signal_name ](fg:red bg:#303030)$symbol]($style)'
+style = 'bg:#30333d'
+symbol = '[✘ ](fg:red bg:#30333d)'
+success_symbol = '[✔ ](fg:green bg:#30333d)'
+format = '[[$signal_name ](fg:red bg:#30333d)$symbol]($style)'
 map_symbol = false
 disabled = false
 
 [character]
-success_symbol = '[✔](fg:green bg:#303030)'
-error_symbol = '[✘](fg:red bg:#303030)'
+success_symbol = 'I'
+error_symbol = 'I'
+vimcmd_symbol = 'N'
 
 [cmd_duration]
 min_time = 1
-style = 'bg:#303030 fg:#909090'
-format = '[ took [$duration](bold fg:#909090 bg:#303030)  ]($style)'
+style = 'bg:#30333d fg:#909090'
+format = '[ took [$duration](bold fg:#909090 bg:#30333d)  ]($style)'
 
 [hostname]
 ssh_only = false
-style = 'fg:#b69676 bg:#303030'
+style = 'fg:#b69676 bg:#30333d'
 format = '[@$hostname ]($style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#303030"
+style = "bg:#30333d"
 disabled = true      # Disabled by default
 
 [directory]
-style = "fg:#0a96d6 bg:#303030"
+style = "fg:#0a96d6 bg:#30333d"
 format = "[  $path ]($style)"
 truncation_length = 9
 truncation_symbol = "…/"
@@ -78,46 +79,46 @@ symbol = ' '
 
 [c]
 symbol = ""
-style = "bg:#303030"
+style = "bg:#30333d"
 format = '[ $symbol ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#303030"
+style = "bg:#30333d"
 format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
-style = "fg:#56b60a bg:#303030"
-format = '[](fg:#707070 bg:#303030)[  ](fg:#56b60a bg:#303030)[ $branch ](bold $style)'
+style = "fg:#56b60a bg:#30333d"
+format = '[](fg:#707070 bg:#30333d)[  ](fg:#56b60a bg:#30333d)[ $branch ](bold $style)'
 
 [git_status]
-style = "fg:#0a96d6 bg:#303030"
+style = "fg:#0a96d6 bg:#30333d"
 conflicted = "~"
 up_to_date = " "
-untracked = "?"
+untracked = "?${count}"
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
 stashed = "*"
-modified = " "
-staged = '[++\($count\)](fg:#56b60a bg:#303030)'
+modified = " ${count}"
+staged = '[++\($count\)](fg:#56b60a bg:#30333d)'
 renamed = " "
-deleted = " "
+deleted = " ${count}"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = "go"
-style = "fg:#FFFFFF bg:#303030"
+style = "fg:#FFFFFF bg:#30333d"
 format = '[ $symbol ](bold $style)'
 
 [java]
 symbol = ""
-style = "fg:#0a96d6 bg:#303030"
+style = "fg:#0a96d6 bg:#30333d"
 format = '[ $symbol ]($style)'
 
 [nodejs]
 symbol = ""
-style = "fg:#0a96d6 bg:#303030"
+style = "fg:#0a96d6 bg:#30333d"
 format = '[ $symbol ]($style)'
 
 [python]
@@ -126,16 +127,16 @@ format = '[ $symbol ]($style)'
 # Note this will only work when the venv is inside the project and it will only
 # work in the directory that contains the venv dir but maybe this is ok?
 symbol = ' '
-style = "fg:#0a96d6 bg:#303030"
+style = "fg:#0a96d6 bg:#30333d"
 format = '[ $symbol ]($style)'
 
 [rust]
 symbol = ""
-style = "fg:#0a96d6 bg:#303030"
+style = "fg:#0a96d6 bg:#30333d"
 format = '[ $symbol ]($style)'
 
 [time]
 disabled = false
 time_format = "%R"              # Hour:Minute Format
-style = "bg:#303030 fg:#567676"
+style = "bg:#30333d fg:#567676"
 format = '[$time ]($style)'

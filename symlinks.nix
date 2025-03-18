@@ -4,6 +4,10 @@
       source = ./AstroNvim;
       recursive = true;
     };
+    ".config/fish" = { 
+      source = ./fish;
+      recursive = true;
+    };
     ".config/foot".source = ./foot;
     ".config/starship.toml".source = ./starship/starship.toml;
     ".config/sway".source = ./sway;
