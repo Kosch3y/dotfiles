@@ -3,12 +3,11 @@
 using Dates
 
 function main()
-  time_path = "/tmp/midnight.tmp"
+  ENV["TZ"] = "UTC"
+  (time_path, _) = mktemp()
   set_time(time_path)
-  env = get_env(time_path)
+  cmd = make_cmd(time_path)
 
-  cmd = `$ARGS`
-  cmd = setenv(cmd, env)
   try
     run(cmd)
   catch
@@ -23,11 +22,19 @@ function get_env(time_path)
   env["FAKETIME"] = "%"
   env["FAKETIME_UPDATE_TIMESTAMP_FILE"] = "1"
   env["FAKETIME_FOLLOW_FILE"] = time_path
-  
-  # BUG?? mb related: https://github.com/wolfcw/libfaketime/issues/444 
-  env["TZ"] = "UTC"
 
   env
+end
+
+function make_cmd(time_path)
+  if isfile("/etc/NIXOS")
+    time = readchomp(open(`stat -c %y $time_path`))
+    `faketime $time $ARGS`
+  else
+    env = get_env(time_path)
+    cmd = setenv(`$ARGS`, env)
+    cmd
+  end
 end
 
 function set_time(time_path)

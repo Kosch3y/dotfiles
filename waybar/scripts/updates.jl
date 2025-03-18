@@ -3,12 +3,16 @@
 dependencies = ["checkupdates", "yay", "arch-audit"]
 
 function main()
-  updates = (
-    arch=count_updates(`checkupdates`),
-    aur=count_updates(`yay -Qum`),
-    security=count_updates(`arch-audit -u`))
-  security_flag = updates.security != 0 ? "" : ""
-  println("$(updates.arch)+$(updates.aur) $(security_flag)")
+  if isfile("/etc/NIXOS")
+    println(raw"¯\_(ツ)_/¯")
+  else
+    updates = (
+      arch=count_updates(`checkupdates`),
+      aur=count_updates(`yay -Qum`),
+      security=count_updates(`arch-audit -u`))
+    security_flag = updates.security != 0 ? "" : ""
+    println("$(updates.arch)+$(updates.aur) $(security_flag)")
+  end
 end
 
 function count_updates(cmd)

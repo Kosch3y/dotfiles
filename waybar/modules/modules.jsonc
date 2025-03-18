@@ -1,7 +1,9 @@
 {
   "custom/logo": {
     "format": "  <span font='12' rise='-1000' color='#a3b8d6'>{icon}</span>",
-    "format-icons": ["󰣇"],
+    "format-icons": [
+      ""
+    ],
   },
   "sway/workspaces": {
     "disable-scroll": true,
@@ -16,14 +18,16 @@
       "6": "",
       "7": "",
       "8": "",
-      "9": "",
+      "9": "",
       "10": "",
       "default": "",
     },
   },
   "sway/language": {
     "format": "<span font='14' rise='-1000' color='#a3b8d6'>󰌌</span> {short}",
-    "format-icons": ["󰌌"],
+    "format-icons": [
+      "󰌌"
+    ],
     "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
   },
   "disk": {
@@ -35,7 +39,10 @@
     "format": "<span font='14' rise='-1000' color='#a3b8d6'>{icon}</span>   {volume:2}%",
     "format-muted": "",
     "format-icons": {
-      "default": ["", ""],
+      "default": [
+        "",
+        ""
+      ],
     },
     "scroll-step": 5,
     "on-click": "pavucontrol",
@@ -46,32 +53,48 @@
   },
   "battery": {
     "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {capacity:2}%",
-    "format-icons": ["󰂎", "󰁻", "󰁿", "󰂁", "󰁹"],
+    "format-icons": [
+      "󰂎",
+      "󰁻",
+      "󰁿",
+      "󰂁",
+      "󰁹"
+    ],
   },
   "memory": {
     "interval": 30,
     "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {used:4}+{swapUsed:4}GiB",
-    "format-icons": ["󰍛"],
+    "format-icons": [
+      "󰍛"
+    ],
   },
   "load": {
     "interval": 10,
     "format": "<span font='14' rise='-1000' color='#a3b8d6'> </span> {load1:4}",
-    "format-icons": [""],
+    "format-icons": [
+      ""
+    ],
     "max-length": 10,
   },
   "temperature": {
     "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {temperatureC:2}°C",
-    "format-icons": [""],
+    "format-icons": [
+      ""
+    ],
   },
   "custom/despair": {
     "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {0}",
-    "format-icons": ["󰈸"],
+    "format-icons": [
+      "󰈸"
+    ],
     "exec": "~/.config/waybar/scripts/despair.jl",
     "interval": 120,
   },
   "custom/updates": {
     "format": "<span font='16' rise='-1000' color='#a3b8d6'>{icon}</span> {0}",
-    "format-icons": [" 󰚰"],
+    "format-icons": [
+      " 󰚰"
+    ],
     "exec": "~/.config/waybar/scripts/updates.jl",
     "interval": 600,
   },
